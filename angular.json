@@ -23,13 +23,16 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
+              "src/assets/favicon.png",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/variables.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/shared.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -90,13 +93,16 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "src/favicon.ico",
+              "src/assets/favicon.png",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/variables.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/shared.js"
+            ]
           }
         }
       }

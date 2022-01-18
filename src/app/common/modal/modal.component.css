@@ -1,0 +1,75 @@
+.backdrop {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+
+.open {
+  display: flex !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal {
+  position: fixed;
+  opacity: 0;
+  transform: translateY(-30rem);
+  transition: opacity 1s ease-out, translate 1s ease-in;
+  z-index: 200;
+  top: 20%;
+  left: 21%;
+  width: 57%;
+  background: white;
+  min-height: 20rem;
+  padding: 1rem;
+  border: 1px solid var(--light-gray, #ccc);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  word-break: break-all;
+}
+
+.modal__title {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.modal__actions {
+  text-align: center;
+  bottom: -2rem;
+  position: relative;
+}
+
+.modal__action {
+  border: 1px solid var(--dark-green, var(--dark-green, #0e4f1f));
+  background: var(--dark-green, var(--dark-green, #0e4f1f));
+  text-decoration: none;
+  color: white;
+  font: inherit;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.modal__action:hover,
+.modal__action:active {
+  background: #2ddf5c;
+  border-color: #2ddf5c;
+}
+
+.modal__action--negative {
+  background: red;
+  border-color: red;
+}
+
+.modal__action--negative:hover,
+.modal__action--negative:active {
+  background: var(--red-color, #ff1b68);
+  border-color: var(--red-color, #ff1b68);
+}
